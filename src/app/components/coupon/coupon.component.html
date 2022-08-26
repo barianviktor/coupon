@@ -1,0 +1,14 @@
+<div class="coupon-coontainer">
+  <div (click)="handleCouponClick()" class="coupon-header">
+    <div class="coupon-icon">
+      <img src="assets/discount.png" alt="coupon-icon" />
+    </div>
+    <div
+      [ngClass]="couponIsOpen ? 'coupon-title-open' : 'coupon-title-close'"
+      class="coupon-title"
+    >
+      <p>Coupon Form</p>
+    </div>
+  </div>
+  <app-coupon-form [couponIsOpen]="couponIsOpen"></app-coupon-form>
+</div>

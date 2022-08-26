@@ -1,0 +1,84 @@
+<div class="coupon-form-container">
+  <form
+    [ngClass]="couponIsOpen ? 'form-open' : 'form-close'"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="couponForm"
+  >
+    <div class="form-container">
+      <label for="fullNameInput">Full Name*</label>
+      <input
+        id="fullNameInput"
+        type="text"
+        formControlName="fullName"
+        [class.is-invalid]="fullName.touched && fullName.invalid"
+      />
+      <div *ngIf="fullName.touched && fullName.invalid" class="error-cont">
+        <p *ngIf="fullName.hasError('required')">
+          Ezt a mezot kotelezo kitolteni!
+        </p>
+        <p *ngIf="fullName.hasError('minlength')">
+          A mezonek legalabb
+          {{ fullName.getError("minlength").requiredLength }} hosszunak kell
+          lennie
+        </p>
+      </div>
+    </div>
+    <div class="form-container">
+      <label for="emailInput">Email*</label>
+      <input
+        id="emailInput"
+        type="text"
+        formControlName="email"
+        [class.is-invalid]="email.touched && email.invalid"
+      />
+      <div *ngIf="email.touched && email.invalid" class="error-cont">
+        <p *ngIf="email.hasError('required')">
+          Ezt a mezot kotelezo kitolteni!
+        </p>
+        <p *ngIf="email.hasError('email')">Nem megfelelo formatumu az email</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <label for="phoneNumberInput">Phone Number*</label>
+      <input
+        (keypress)="onlyNumber($event)"
+        id="phoneNumberInput"
+        type="text"
+        formControlName="phoneNumber"
+        [class.is-invalid]="phoneNumber.touched && phoneNumber.invalid"
+      />
+      <div
+        *ngIf="phoneNumber.touched && phoneNumber.invalid"
+        class="error-cont"
+      >
+        <p *ngIf="phoneNumber.hasError('required')">
+          Ezt a mezot kotelezo kitolteni!
+        </p>
+        <p *ngIf="phoneNumber.hasError('minlength')">
+          A mezonek legalabb
+          {{ phoneNumber.getError("minlength").requiredLength }} hosszunak kell
+          lennie
+        </p>
+      </div>
+    </div>
+    <div class="form-container">
+      <label for="couponInput">Coupon Code*</label>
+      <input
+        id="couponInput"
+        type="text"
+        formControlName="coupon"
+        [class.is-invalid]="coupon.touched && coupon.invalid"
+      />
+      <div *ngIf="coupon.touched && coupon.invalid" class="error-cont">
+        <p *ngIf="coupon.hasError('required')">
+          Ezt a mezot kotelezo kitolteni!
+        </p>
+        <p *ngIf="coupon.hasError('pattern')">Nem megfelelo a kupon</p>
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div class="img-container">
+    <img src="assets/macoswallpaper.png" alt="" />
+  </div>
+</div>

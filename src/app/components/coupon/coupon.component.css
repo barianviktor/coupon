@@ -1,0 +1,58 @@
+.coupon-icon{
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    float: left;
+    padding: 15px;
+
+}
+.coupon-icon img{
+    width: 60px;
+}
+.coupon-title p {
+    white-space: nowrap
+}
+.coupon-title{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    font-size: 2rem;
+    overflow: hidden;
+    transition: width 0.2s ease-out;
+}
+
+.coupon-title-open{
+    width: 350px;
+}
+.coupon-title-close{
+    width: 0;
+
+    transition-delay: 0.4s ;
+}
+.coupon-header{
+    cursor: pointer;
+    background-color: rgb(26, 26, 26);
+   color: whitesmoke;
+   transition: all 0.2s ease-in;
+   
+}
+.coupon-header:hover{
+    background-color: rgb(43, 43, 43);
+
+}
+.coupon-coontainer{
+   box-sizing: content-box;
+    width: fit-content;
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    margin: 25px;
+    transition: box-shadow 0.2s ease-in;
+}
+.coupon-coontainer:hover{
+    box-shadow: 5px 5px 10px rgba(37, 37, 37, 0.459);
+
+}

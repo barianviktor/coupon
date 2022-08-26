@@ -1,0 +1,113 @@
+.coupon-form-container{
+    width: auto;
+    overflow: hidden;
+    color: whitesmoke;
+    position: relative;
+    background-color: rgb(31, 30, 30);
+}
+.img-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+.img-container img{
+    width: 150%;
+    border-bottom: 2px solid rgb(78, 78, 78);
+}
+.form-close{
+    max-height: 0px;
+    padding:  0 auto;
+    margin:  0 auto;
+    width: 0;
+
+}
+.form-open{
+    transition-delay: 0.4s;
+    max-height: 1000px;
+    padding: 25px ;
+    margin: 100px auto 50px auto;
+
+
+}
+form{
+    box-shadow: 3px 5px 10px rgb(17, 17, 17);
+
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    width: 75%;
+    transition: max-height 0.3s ease-in, padding 0s ease 0.3s, margin 0s ease 0.3s, width 0s ease 0.3s;
+    background-color: rgb(34, 34, 34);
+    
+}
+input{
+    padding:  10px;
+    color: whitesmoke;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(31, 31, 31);
+    border: 1px solid rgb(48, 48, 48);
+    transition: all 0.2s ease-in;
+}
+ input:hover{
+    background-color: rgb(41, 41, 41);
+    border: 1px solid rgb(65, 65, 65);
+}
+input:focus{
+    background-color: rgb(31, 31, 31);
+    border: 1px solid rgb(87, 87, 87);
+}
+label{
+    letter-spacing: 1px ;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.is-invalid{
+    border: 1px solid rgb(255, 90, 90);
+    
+}
+
+button{
+    cursor: pointer;
+    padding:  10px;
+    color: whitesmoke;
+    outline: none;
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
+    border: 1px solid rgb(66, 66, 66);
+    transition: all 0.2s ease-in;
+}
+button:hover{
+    background-color: rgb(41, 41, 41);
+    border: 1px solid rgb(65, 65, 65);
+}
+button:focus{
+    background-color: rgb(26, 26, 26);
+    border: 1px solid rgb(87, 87, 87);
+}
+.error-cont p{
+    color:  rgb(255, 90, 90);
+    padding: 5px 0;
+    letter-spacing: 1px ;
+    font-weight: 300;
+    font-size: 12px;
+}
+.form-container *{
+    display: block;
+    width: 100%;
+}
+.form-container label{
+    padding: 10px 0;
+}
+.form-container{
+    width: 100%;
+    padding: 10px 0;
+}
